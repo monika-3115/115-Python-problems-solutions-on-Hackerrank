@@ -1,0 +1,12 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+M = int(input())
+m_arr = list(map(int, input().split(" ")))
+N = int(input())
+n_arr = list(map(int, input().split(" ")))
+m_set = set(m_arr)
+n_set = set(n_arr)
+m_diff = m_set.difference(n_set)
+n_diff = n_set.difference(m_set)
+s = m_diff.union(n_diff)
+l = sorted(s)
+print(*l, sep="\n")
