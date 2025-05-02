@@ -1,0 +1,17 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+from collections import Counter
+
+
+if __name__ == '__main__':
+    s = input().strip()
+    chars = Counter(s)
+    sorted_chars = sorted(chars.items(), key=lambda item: (-item[1], item[0]))
+    
+    for char, count in sorted_chars[:3]:
+        print(f"{char} {count}")
